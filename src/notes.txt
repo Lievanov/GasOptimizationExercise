@@ -2,3 +2,30 @@
 - ImportStruct, change Uint structure to uint8 instead of 256
 - checkIfWhiteListed() function change require for Errors and revert
 - replace history with events
+- remove AddHistory(), getPaymentHistory()
+- delete forLoops that set status=1
+
+deplot cost:
+3331205
+3219858
+3104795
+3059154
+3053296
+2600814
+2492366
+2490098
+2385248
+2297229
+2296365
+2296329
+2329069
+2090352
+2044953
+1318079
+1253374
+1169357
+1154436
+1188348
+1185683
+1152611
+707738 after I set optimizer=true
