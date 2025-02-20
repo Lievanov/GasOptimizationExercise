@@ -1,0 +1,4 @@
+- replace require for Custom errors.
+- ImportStruct, change Uint structure to uint8 instead of 256
+- checkIfWhiteListed() function change require for Errors and revert
+- replace history with events
