@@ -1,0 +1,36 @@
+- tradeflag / dividentFlag should be a boolean 
+- basicFlag unused 
+- remove Constants contract and create the flags within the GasContract
+- PaymentCounter / tradePercent -> 
+  change them to constant and uint8
+- tradingMode in updatePayment was removed (set to true)
+- getTradingMode() function was removed
+- reordering properties
+- balanceOf remove uint256 referencee and return the mapping value 
+
+- remove ownable contract 
+- change the checkForAdmin() to use a mapping instead of array
+
+- paymentCounter removed reference from 0 to empty
+- replace require for errors (revert)
+- refactor onlyAdminOrOwner modifier
+
+- in the ImportantStruct, change the Uint structure to use uint8 instead256
+- replace History struct to use events
+- checkIfWhiteListed() function change require for Errors and revert
+- isready is not in use
+- Compare Ownable contract vs using contractowner property
+- remove contractOwner property
+- PaymentType.Unknown -> check this
+- checkIfWhiteListed function -> replace require for Errors
+- checkIfWhiteListed remove parameter in function
+
+Deployment cost changes:
+- 2659266
+- 2649553
+- 2579316
+- 2558551
+- 2299612
+- 2178287
+- 2147699
+- 2053269
