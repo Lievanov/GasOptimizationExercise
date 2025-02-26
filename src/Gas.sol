@@ -115,14 +115,13 @@ contract GasContract {
                 administrators[ii] = _admins[ii];
                 if (_admins[ii] == msg.sender) {
                     balances[msg.sender] = totalSupply;
+                    emit supplyChanged(_admins[ii], totalSupply);
+
                 } else {
                     balances[_admins[ii]] = 0;
-                }
-                if (_admins[ii] == msg.sender) {
-                    emit supplyChanged(_admins[ii], totalSupply);
-                } else if (_admins[ii] != msg.sender) {
                     emit supplyChanged(_admins[ii], 0);
                 }
+                
             }
         }
     }
@@ -250,6 +249,7 @@ contract GasContract {
                 payments[_user][ii].amount = _amount;
                 
                 addHistory(_user, true);
+     
                 emit PaymentUpdated(
                     senderOfTx,
                     _ID,
